@@ -1,15 +1,20 @@
+import 'package:bookly/Features/splash_feature/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 void main() {
   
-  runApp(Bookly());
+  runApp(BooklyApp());
 }
 
-class Bookly extends StatelessWidget {
-  const Bookly({super.key});
+class BooklyApp extends StatelessWidget {
+  const BooklyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return GetMaterialApp(
+      home: SplashView(),
+    );
+    
   }
-}
+} 
