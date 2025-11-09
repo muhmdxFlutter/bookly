@@ -1,6 +1,11 @@
 import 'package:bookly/Core/utils/assets_data.dart';
-import 'package:bookly/Features/splash_feature/presentation/views/widgets/sliding_text.dart';
+import 'package:bookly/Features/home/presentation/views/home_view.dart';
+import 'package:bookly/Features/splash/presentation/views/widgets/sliding_text.dart';
+import 'package:bookly/Features/splash/presentation/views/widgets/sliding_text.dart';
+import 'package:bookly/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/route_manager.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -19,6 +24,14 @@ class _SplashViewBodyState extends State<SplashViewBody>
     super.initState();
     initSlidingAnimation();
     animationController.forward();
+    NavigateToHomeView();
+  }
+
+  void NavigateToHomeView() {
+    Future.delayed(const Duration(seconds: 3), () {
+      Get.to(() => const HomeView(),
+          transition: Transition.fade, duration: KTransitionDuration);
+    });
   }
   @override
   void dispose() {
