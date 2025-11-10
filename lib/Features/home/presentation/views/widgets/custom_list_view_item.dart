@@ -1,5 +1,5 @@
 
-import 'package:bookly/Core/utils/assets_data.dart';
+import 'package:bookly/Core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedListViewItem extends StatelessWidget {
