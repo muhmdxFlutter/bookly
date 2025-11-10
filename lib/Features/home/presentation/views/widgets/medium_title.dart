@@ -1,4 +1,5 @@
 import 'package:bookly/Core/utils/styles.dart';
+import 'package:bookly/constants.dart';
 import 'package:flutter/material.dart';
 
 class MediumTitle extends StatelessWidget {
@@ -6,11 +7,11 @@ class MediumTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-            padding: EdgeInsets.only(top: 30,left: 10),
+    return  Padding(
+            padding:const EdgeInsets.only(top: 30,left: 10,bottom: 15),
             child: Text(
               'Best Seller',
-              style: Styles.mediumTitle,
+              style: Styles.textStyle18.copyWith(fontFamily: KGTSectraFine,)
             ),
           );
   }
