@@ -1,5 +1,6 @@
 import 'package:bookly/Core/utils/styles.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/book_raiting.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/books_action.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/featured_list_view_item.dart';
 import 'package:flutter/material.dart';
@@ -18,11 +19,25 @@ class BookDetailsViewBody extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: width * .2),
           child: FeaturedListViewItem(),
         ),
-         const SizedBox(height: 20),
-        Text('The Jungle Book',style: Styles.textStyle30,),
+        const SizedBox(height: 20),
+        Text('The Jungle Book', style: Styles.textStyle30),
+        const SizedBox(height: 4),
+        Opacity(
+          opacity: .7,
+          child: Text(
+            'Rudyard Kipling',
+            style: Styles.textStyle18.copyWith(
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ),
         const SizedBox(height: 6),
-        Opacity(opacity: .7,
-        child: Text('Rudyard Kipling',style: Styles.textStyle18.copyWith(fontStyle: FontStyle.italic,fontWeight: FontWeight.w500),)), const SizedBox(height: 6),BookRaiting(),
+        BookRaiting(),
+        const SizedBox(height: 37),
+        BooksAction(),
+
+        //  MediumTitle(),
       ],
     );
   }
