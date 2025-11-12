@@ -17,10 +17,11 @@ class HomeViewBody extends StatelessWidget {
             children: const [
               CustomAppBar(),
               FeaturedBooksListView(),
-              MediumTitle(),
+              MediumTitle(title: 'Best Seller'),
             ],
           ),
-        ),BestSellerSliverList()
+        ),
+        BestSellerSliverList(),
         // SliverFillRemaining(
         //   child: Padding(
         //     padding: EdgeInsets.symmetric(horizontal: 10),

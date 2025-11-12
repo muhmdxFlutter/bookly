@@ -3,6 +3,8 @@ import 'package:bookly/Features/home/presentation/views/widgets/book_raiting.dar
 import 'package:bookly/Features/home/presentation/views/widgets/books_action.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/featured_list_view_item.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/medium_title.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/similar_featured_list_view_you_can_like.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -36,8 +38,12 @@ class BookDetailsViewBody extends StatelessWidget {
         BookRaiting(),
         const SizedBox(height: 37),
         BooksAction(),
-
-        //  MediumTitle(),
+        const SizedBox(height: 10),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: MediumTitle(title: 'You can also like'),
+        ),
+        SimilarFeaturedListViewYouCanLike(),
       ],
     );
   }
