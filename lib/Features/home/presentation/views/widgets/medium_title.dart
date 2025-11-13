@@ -8,7 +8,7 @@ class MediumTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 30, left: 10, bottom: 15),
+      padding: const EdgeInsets.only(top: 20, left: 10, bottom: 10),
       child: Text(title, style: Styles.textStyle18.copyWith()),
     );
   }

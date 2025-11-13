@@ -13,11 +13,11 @@ class BestSellerListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.routeToBookDetailsView); 
+        GoRouter.of(context).push(AppRouter.routeToBookDetailsView);
       },
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 10),
-        height: 120,
+        margin: const EdgeInsets.only(left: 20, right: 20),
+        height: 125,
         child: Row(
           children: [
             AspectRatio(
@@ -41,34 +41,36 @@ class BestSellerListViewItem extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: MediaQuery.of(context).size.width * .5,
-                    child:const Text(
+                    child: Text(
                       'Harry Potter And The Jugle Book',
-                      style: Styles.textStyle20,
+                      style: Styles.textStyle20.copyWith(
+                        fontFamily: KGTSectraFine,
+                      ),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  const SizedBox(height: 3),
-                 const Text(
-                    'Rudyard Kipling',
-                    style: TextStyle(
-                      fontSize: 15,
-                      color:  Color.fromARGB(255, 151, 151, 151),
-                      fontWeight: FontWeight.w700,
+                  const SizedBox(height: 1),
+                  Opacity(
+                    opacity: .7,
+                    child: Text(
+                      'Rudyard Kipling',
+                      style: Styles.textStyle14.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 3),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                     Text(
+                      Text(
                         '19.99 ₤',
                         style: Styles.textStyle20.copyWith(
-                          fontFamily: KGTSectraFine,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                     const BookRaiting(),
+                      const BookRaiting(),
                     ],
                   ),
                 ],

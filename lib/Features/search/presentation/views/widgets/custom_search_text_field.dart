@@ -7,16 +7,17 @@ class CustomSearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 40),
       child: TextField(
         decoration: InputDecoration(
+          isDense: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(6),
             borderSide: const BorderSide(
               color: Color.fromARGB(255, 198, 196, 196),
               width: 2.0,
               style: BorderStyle.solid,
-            ), 
+            ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(6),
@@ -34,13 +35,13 @@ class CustomSearchTextField extends StatelessWidget {
             opacity: .7,
             child: Text(
               'search',
-              style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w600),
+              style: Styles.textStyle18.copyWith(fontWeight: FontWeight.w600),
             ),
           ),
         ),
-        style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
+        style: Styles.textStyle16.copyWith(fontWeight: FontWeight.bold),
         cursorColor: const Color.fromARGB(255, 223, 224, 225),
-        cursorWidth: 3,
+        cursorWidth: 2,
       ),
     );
   }

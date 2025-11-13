@@ -9,7 +9,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 10, right: 0, top: 20, bottom: 20),
+      padding: const EdgeInsets.only(left: 20, right: 10, top: 35, bottom: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -22,7 +22,7 @@ class CustomAppBar extends StatelessWidget {
               Icons.search,
               size: 30,
               fontWeight: FontWeight.w100,
-              color:  Color.fromARGB(255, 255, 255, 255),
+              color: Color.fromARGB(255, 255, 255, 255),
             ),
           ),
         ],

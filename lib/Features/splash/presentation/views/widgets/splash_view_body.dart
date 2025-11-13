@@ -26,12 +26,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void navigateToHomeView() {
     Future.delayed(const Duration(seconds: 3), () {
-      if(!mounted ){return;}
+      if (!mounted) {
+        return;
+      }
       GoRouter.of(context).push(AppRouter.routeToHomeView);
       // Get.to(() => const HomeView(),
       //     transition: Transition.fade, duration: KTransitionDuration);
     });
   }
+
   @override
   void dispose() {
     super.dispose();
@@ -39,7 +42,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void initSlidingAnimation() {
-     animationController = AnimationController(
+    animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),
     );
@@ -56,11 +59,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
       crossAxisAlignment: CrossAxisAlignment.stretch,
 
       children: [
-        Image.asset(AssetsData.logo),
+        Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width * .17,
+          ),
+          child: Image.asset(AssetsData.logo),
+        ),
         const SizedBox(height: 10),
         SlidingText(slidingAnimation: slidingAnimation),
       ],
     );
   }
 }
-
