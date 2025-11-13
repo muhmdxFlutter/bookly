@@ -14,10 +14,10 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .2),
-          child: FeaturedListViewItem(),
+          child: const FeaturedListViewItem(),
         ),
         const SizedBox(height: 20),
-        Text('The Jungle Book', style: Styles.textStyle30),
+        const Text('The Jungle Book', style: Styles.textStyle30),
         const SizedBox(height: 4),
         Opacity(
           opacity: .7,
@@ -30,9 +30,9 @@ class BookDetailsSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 6),
-        BookRaiting(),
+        const BookRaiting(),
         const SizedBox(height: 37),
-        BooksAction(),
+        const BooksAction(),
       ],
     );
   }

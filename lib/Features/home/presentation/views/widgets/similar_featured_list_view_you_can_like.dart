@@ -12,9 +12,9 @@ class SimilarFeaturedListViewYouCanLike extends StatelessWidget {
         itemCount: 10,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: const FeaturedListViewItem(),
+          return const Padding(
+            padding: EdgeInsets.only(left: 10),
+            child: FeaturedListViewItem(),
           );
         },
       ),

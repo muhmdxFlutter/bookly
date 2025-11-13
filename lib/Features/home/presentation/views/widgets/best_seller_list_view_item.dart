@@ -16,7 +16,7 @@ class BestSellerListViewItem extends StatelessWidget {
         GoRouter.of(context).push(AppRouter.routeToBookDetailsView); 
       },
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 10),
+        margin: const EdgeInsets.symmetric(horizontal: 10),
         height: 120,
         child: Row(
           children: [
@@ -24,7 +24,7 @@ class BestSellerListViewItem extends StatelessWidget {
               aspectRatio: 2.5 / 4,
               child: Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  borderRadius: const BorderRadius.all(Radius.circular(10)),
                   color: Colors.red,
                   image: DecorationImage(
                     fit: BoxFit.fill,
@@ -68,7 +68,7 @@ class BestSellerListViewItem extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      BookRaiting(),
+                     const BookRaiting(),
                     ],
                   ),
                 ],

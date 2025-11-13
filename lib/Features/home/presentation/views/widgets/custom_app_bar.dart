@@ -18,11 +18,11 @@ class CustomAppBar extends StatelessWidget {
             onPressed: () {
               GoRouter.of(context).push(AppRouter.routeToSearchView);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               size: 30,
               fontWeight: FontWeight.w100,
-              color: const Color.fromARGB(255, 255, 255, 255),
+              color:  Color.fromARGB(255, 255, 255, 255),
             ),
           ),
         ],

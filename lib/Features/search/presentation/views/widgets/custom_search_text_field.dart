@@ -12,21 +12,21 @@ class CustomSearchTextField extends StatelessWidget {
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(6),
-            borderSide: BorderSide(
-              color: const Color.fromARGB(255, 198, 196, 196),
+            borderSide: const BorderSide(
+              color: Color.fromARGB(255, 198, 196, 196),
               width: 2.0,
               style: BorderStyle.solid,
             ), 
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(6),
-            borderSide: BorderSide(
-              color: const Color.fromARGB(255, 255, 255, 255),
+            borderSide: const BorderSide(
+              color: Color.fromARGB(255, 255, 255, 255),
               width: 2,
               style: BorderStyle.solid,
             ),
           ),
-          suffixIcon: Opacity(
+          suffixIcon: const Opacity(
             opacity: .7,
             child: Icon(Icons.search, color: Colors.white, size: 25),
           ),
