@@ -3,6 +3,7 @@ import 'package:bookly/Core/utils/api_service.dart';
 import 'package:bookly/Features/home/data/models/book_model/book_model.dart';
 import 'package:bookly/Features/home/data/repos/home_repo.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepoImpl implements HomeRepo {
   final ApiService apiService;
@@ -11,15 +12,18 @@ class HomeRepoImpl implements HomeRepo {
   @override
   Future<Either<Failure, List<BookModel>>> featchBestSellerBooks() async {
     try {
-  var data = await apiService.get(endPoint: 'volumes?q=computer science');
-  List<BookModel> books = [];
-  for (var item in data['items']) {
-    books.add(BookModel.fromJson(item));
-  }
-  return right(books);
-} on Exception catch (e) {
-  return left(ServerFailure());
-}
+      var data = await apiService.get(endPoint: 'volumes?q=computer science');
+      List<BookModel> books = [];
+      for (var item in data['items']) {
+        books.add(BookModel.fromJson(item));
+      }
+      return right(books);
+    } catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e));
+      }
+      return left(ServerFailure(e.toString()));
+    }
   }
 
   @override
