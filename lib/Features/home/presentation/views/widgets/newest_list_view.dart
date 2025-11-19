@@ -1,9 +1,8 @@
-
-import 'package:bookly/Features/home/presentation/views/widgets/best_seller_list_view_item.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/newest_list_view_item.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerSliverList extends StatelessWidget {
-  const BestSellerSliverList({super.key});
+class NewestSliverList extends StatelessWidget {
+  const NewestSliverList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +10,7 @@ class BestSellerSliverList extends StatelessWidget {
       delegate: SliverChildBuilderDelegate(
         (context, index) => const Padding(
           padding: EdgeInsets.symmetric(vertical: 5),
-          child: BestSellerListViewItem(),
+          child: NewestListViewItem(),
         ),
         childCount: 10,
       ),
@@ -19,8 +18,8 @@ class BestSellerSliverList extends StatelessWidget {
   }
 }
 //
-// class BestSellerListView extends StatelessWidget {
-//   const BestSellerListView({super.key});
+// class NewestListView extends StatelessWidget {
+//   const NewestListView({super.key});
 
 //   @override
 //   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class BestSellerSliverList extends StatelessWidget {
 //       itemBuilder: (context, index) {
 //         return Padding(
 //           padding: const EdgeInsets.symmetric(vertical: 5),
-//           child: const BestSellerListViewItem(),
+//           child: const NewestListViewItem(),
 //         );
 //       },
 //     );

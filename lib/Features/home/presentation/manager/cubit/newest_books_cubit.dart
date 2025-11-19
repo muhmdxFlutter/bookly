@@ -9,9 +9,9 @@ class NewestBooksCubit extends Cubit<NewestBooksState> {
   NewestBooksCubit(this.homeRepo) : super(NewestBooksInitial());
   final HomeRepo homeRepo;
 
-  Future<void> featchBestSellerBooks() async {
+  Future<void> featchNewestBooks() async {
     emit(NewestBooksLoading());
-    var result = await homeRepo.featchBestSellerBooks();
+    var result = await homeRepo.featchNewestBooks();
     result.fold(
       (failure) => emit(NewestBooksFailure(failure.errMessage)),
       (books) => emit(NewestBooksSuccess(books)),
