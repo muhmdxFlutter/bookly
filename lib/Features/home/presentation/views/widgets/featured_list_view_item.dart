@@ -1,9 +1,8 @@
-import 'package:bookly/Core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedListViewItem extends StatelessWidget {
-  const FeaturedListViewItem({super.key});
-
+  const FeaturedListViewItem({super.key, required this.imageUrl});
+  final String imageUrl;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -11,10 +10,9 @@ class FeaturedListViewItem extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(10)),
-          color: Colors.red,
           image: DecorationImage(
             fit: BoxFit.fill,
-            image: AssetImage(AssetsData.test),
+            image: NetworkImage(imageUrl),
           ),
         ),
       ),
