@@ -22,7 +22,7 @@ class NewestSliverList extends StatelessWidget {
             }, childCount: 10),
           );
         } else if (state is NewestBooksFailure) {
-          return const SliverToBoxAdapter(child: CustomErrorWidget());
+          return SliverToBoxAdapter(child: CustomErrorWidget(errMessage: state.errMessage,));
         } else {
           return const SliverToBoxAdapter(child: CustomLoadingIndicator());
         }

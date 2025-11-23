@@ -2,14 +2,14 @@ import 'package:bookly/Core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomErrorWidget extends StatelessWidget {
-  const CustomErrorWidget({super.key});
-
+  const CustomErrorWidget({super.key, required this.errMessage});
+  final String errMessage;
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'ERROR',
-        style: Styles.textStyle30.copyWith(color: Colors.red),
+        errMessage,
+        style: Styles.textStyle20.copyWith(color: Colors.red),
       ),
     );
   }
