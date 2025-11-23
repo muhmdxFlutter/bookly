@@ -15,7 +15,7 @@ class NewestListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.routeToBookDetailsView);
+        GoRouter.of(context).push(AppRouter.routeToBookDetailsView,extra: bookModel);
       },
       child: Container(
         margin: const EdgeInsets.only(left: 20, right: 10),
