@@ -8,10 +8,14 @@ class FeaturedListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 1.7 / 2.7,
-      child: CachedNetworkImage(
-        imageUrl: imageUrl,
-        fit: BoxFit.fill,
-        errorWidget: (context, url, error) => const Icon(Icons.error, size: 35),
+      child: ClipRRect(
+        borderRadius: const BorderRadiusGeometry.all(Radius.circular(12)),
+        child: CachedNetworkImage(
+          imageUrl: imageUrl,
+          fit: BoxFit.fill,
+          errorWidget: (context, url, error) =>
+              const Icon(Icons.error, size: 35),
+        ),
       ),
     );
   }
