@@ -23,7 +23,8 @@ class SimilarFeaturedListViewYouCanLike extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 10),
                   child: FeaturedListViewItem(
                     imageUrl:
-                        state.books[index].volumeInfo.imageLinks.thumbnail,
+                        state.books[index].volumeInfo.imageLinks?.thumbnail ??
+                        'https://islandpress.org/files/default_book_cover_2015.jpg',
                   ),
                 );
               },

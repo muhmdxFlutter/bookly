@@ -16,7 +16,9 @@ class BookDetailsSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .23),
           child: FeaturedListViewItem(
-            imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
+            imageUrl:
+                bookModel.volumeInfo.imageLinks?.thumbnail ??
+                'https://islandpress.org/files/default_book_cover_2015.jpg',
           ),
         ),
         const SizedBox(height: 20),

@@ -15,7 +15,9 @@ class NewestListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.routeToBookDetailsView,extra: bookModel);
+        GoRouter.of(
+          context,
+        ).push(AppRouter.routeToBookDetailsView, extra: bookModel);
       },
       child: Container(
         margin: const EdgeInsets.only(left: 20, right: 10),
@@ -29,7 +31,9 @@ class NewestListViewItem extends StatelessWidget {
                   Radius.circular(8),
                 ),
                 child: CachedNetworkImage(
-                  imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
+                  imageUrl:
+                      bookModel.volumeInfo.imageLinks?.thumbnail ??
+                      'https://islandpress.org/files/default_book_cover_2015.jpg',
                   fit: BoxFit.fill,
                   errorWidget: (context, url, error) =>
                       const Icon(Icons.error, size: 35),
@@ -68,7 +72,7 @@ class NewestListViewItem extends StatelessWidget {
                   Opacity(
                     opacity: .7,
                     child: Text(
-                      bookModel.volumeInfo.authors?[0]?? 'No Name',
+                      bookModel.volumeInfo.authors?[0] ?? 'No Name',
                       style: Styles.textStyle14.copyWith(
                         fontWeight: FontWeight.w600,
                       ),
